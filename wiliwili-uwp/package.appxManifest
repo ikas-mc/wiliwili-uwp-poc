@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+	IgnorableNamespaces="uap mp uap3">
+
+	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert" Version="1.1.1.0" />
+	<mp:PhoneIdentity PhoneProductId="71C1D115-F936-37E1-84EE-5064FB1F8525" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>wiliwili uwp</DisplayName>
+		<PublisherDisplayName>unofficial</PublisherDisplayName>
+		<Logo>Assets\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="wiliwili-uwp.exe" EntryPoint="wiliwili-uwp.App">
+			<uap:VisualElements
+				DisplayName="wiliwili-uwp"
+				Description="wiliwili-uwp"
+				BackgroundColor="#336699"
+				Square150x150Logo="Assets\Logo.png"
+				Square44x44Logo="Assets\SmallLogo44x44.png">
+				<uap:SplashScreen Image="Assets\SplashScreen.png" />
+				<uap:DefaultTile/>
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+	<Capabilities>
+		<Capability Name="internetClient"/>
+		<Capability Name="internetClientServer"/>
+		<Capability Name="privateNetworkClientServer"/>
+		<uap3:Capability Name="backgroundMediaPlayback"/>
+   </Capabilities>
+</Package>
