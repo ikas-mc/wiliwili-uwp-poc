@@ -1,0 +1,20 @@
+{
+  "dependencies": [
+    "cpr",
+    {
+      "name": "curl",
+      "features": [
+        "ssl"
+      ]
+    },
+    "fmt",
+    "lunasvg",
+    "mongoose",
+    "nayuki-qr-code-generator",
+    "pystring",
+    "sdl2",
+    "tinyxml2",
+    "tweeny",
+    "cppwinrt"
+  ]
+}
