@@ -6,7 +6,7 @@
 	IgnorableNamespaces="uap mp uap3">
 
 	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert" Version="1.1.1.0" />
-	<mp:PhoneIdentity PhoneProductId="71C1D115-F936-37E1-84EE-5064FB1F8525" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 	<Properties>
 		<DisplayName>wiliwili uwp</DisplayName>
 		<PublisherDisplayName>unofficial</PublisherDisplayName>

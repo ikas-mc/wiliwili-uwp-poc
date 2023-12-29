@@ -6,7 +6,7 @@
 	IgnorableNamespaces="uap mp uap3">
 
 	<Identity Name="FCB6AA56-7F05-4EEF-A14A-83D4369445C0" Publisher="CN=CMake Test Cert" Version="1.1.0.0" />
-	<mp:PhoneIdentity PhoneProductId="71C1D115-F936-37E1-84EE-5064FB1F8525" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<mp:PhoneIdentity PhoneProductId="FCB6AA56-7F05-4EEF-A14A-83D4369445C0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 	<Properties>
 		<DisplayName>borealis demo uwp</DisplayName>
 		<PublisherDisplayName>unofficial</PublisherDisplayName>
