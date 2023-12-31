@@ -29,6 +29,7 @@ https://github.com/ikas-mc/borealis -b wiliwili-uwp-dev
 https://github.com/ikas-mc/wiliwili -b uwp-dev
 
 only for test, mp4/flv support,no dash and live
+use these settings : TLS verify= false , Video format= FLV/MP4 , Maximun frame= 60
 
 ```
 
