@@ -22,6 +22,13 @@ todo:
 remove win32 api uwp not suppoted
 build libmpv for uwp or use winrt MediaPlayer
 
+update:
+-20230101
+build uwp package:
+https://github.com/ikas-mc/borealis -b wiliwili-uwp-dev
+https://github.com/ikas-mc/wiliwili -b uwp-dev
+
+only for test, mp4/flv support,no dash and live
 
 ```
 
