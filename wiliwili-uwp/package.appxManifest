@@ -1,19 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package
-	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
 	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
 	xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-	IgnorableNamespaces="uap mp uap3">
+	xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+	IgnorableNamespaces="uap mp uap3 desktop">
 
-	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert" Version="1.1.1.0" />
-	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert"
+		Version="1.2.1.0" />
+	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4"
+		PhonePublisherId="00000000-0000-0000-0000-000000000000" />
 	<Properties>
 		<DisplayName>wiliwili uwp</DisplayName>
 		<PublisherDisplayName>unofficial</PublisherDisplayName>
 		<Logo>Assets\StoreLogo.png</Logo>
 	</Properties>
 	<Dependencies>
-		<TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+		<TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0"
+			MaxVersionTested="10.0.0.0" />
 	</Dependencies>
 	<Resources>
 		<Resource Language="x-generate" />
@@ -27,14 +32,21 @@
 				Square150x150Logo="Assets\Logo.png"
 				Square44x44Logo="Assets\SmallLogo44x44.png">
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
-				<uap:DefaultTile/>
+				<uap:DefaultTile />
 			</uap:VisualElements>
+			<Extensions>
+				<uap3:Extension Category="windows.appExecutionAlias">
+					<uap3:AppExecutionAlias>
+						<desktop:ExecutionAlias Alias="wiliwili-uwp.exe" />
+					</uap3:AppExecutionAlias>
+				</uap3:Extension>
+			</Extensions>
 		</Application>
 	</Applications>
 	<Capabilities>
-		<Capability Name="internetClient"/>
-		<Capability Name="internetClientServer"/>
-		<Capability Name="privateNetworkClientServer"/>
-		<uap3:Capability Name="backgroundMediaPlayback"/>
-   </Capabilities>
+		<Capability Name="internetClient" />
+		<Capability Name="internetClientServer" />
+		<Capability Name="privateNetworkClientServer" />
+		<uap3:Capability Name="backgroundMediaPlayback" />
+	</Capabilities>
 </Package>
