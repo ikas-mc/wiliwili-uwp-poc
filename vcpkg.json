@@ -9,7 +9,6 @@
     },
     "fmt",
     "lunasvg",
-    "mongoose",
     "nayuki-qr-code-generator",
     "pystring",
     "sdl2",

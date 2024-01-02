@@ -79,8 +79,10 @@ target_link_libraries(${PROJECT_NAME} Microsoft::CppWinRT)
 find_package(unofficial-lunasvg CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} unofficial::lunasvg::lunasvg)
 
-find_package(unofficial-mongoose CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} unofficial::mongoose::mongoose)
+# find_package(unofficial-mongoose CONFIG REQUIRED)
+# target_link_libraries(${PROJECT_NAME} unofficial::mongoose::mongoose)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/wiliwili/library/mongoose EXCLUDE_FROM_ALL)
+target_link_libraries(${PROJECT_NAME} mongoose)
 
 find_package(unofficial-nayuki-qr-code-generator CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} unofficial::nayuki-qr-code-generator::nayuki-qr-code-generator)
