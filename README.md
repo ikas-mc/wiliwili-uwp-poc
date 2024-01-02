@@ -10,12 +10,13 @@ clone https://github.com/ikas-mc/wiliwili-uwp-poc.git
 cd wiliwili-uwp-poc
 clone https://github.com/xfangfang/borealis.git
 clone https://github.com/xfangfang/wiliwili.git
-init submodule  cpr,libpdr,lunasvg 
+init submodule  pystring,libpdr 
 
 install vcpkg
 edit CMakePresets.json,change vcpkg location
  
 open wiliwili-uwp-poc with vscode(with cmake plugins) or other...
+see build-ci.bat for detail
 
 
 todo:
@@ -24,14 +25,9 @@ build libmpv for uwp or use winrt MediaPlayer
 
 
 update:
--20230101
-build uwp package:
-https://github.com/ikas-mc/borealis -b wiliwili-uwp-dev
-https://github.com/ikas-mc/wiliwili -b uwp-dev
+-20230102
+add github action
 
-only for test, mp4/flv/hls support,no dash 
-use these settings : TLS verify= false , Video format= FLV/MP4 , Maximun frame= 60
-https://github.com/ikas-mc/wiliwili-uwp-poc/releases
 ```
 
 
