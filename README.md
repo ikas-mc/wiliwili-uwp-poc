@@ -25,9 +25,14 @@ build libmpv for uwp or use winrt MediaPlayer
 
 
 update:
+-20230107
+add dash
+
 -20230102
 add github action
 
+-20230101
+add live 
 ```
 
 
