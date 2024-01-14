@@ -14,7 +14,7 @@ set PATH=%CMAKE_ROOT%\bin;%VCPKG_ROOT%;%PATH%
 
 git clone --depth 1 https://github.com/ikas-mc/wiliwili-uwp-poc
 git clone --depth 1 -b wiliwili-uwp-dev https://github.com/ikas-mc/borealis
-git clone --depth 1 -b uwp-dev https://github.com/ikas-mc/wiliwili 
+git clone --depth 1 -b uwp-mpv-dev https://github.com/ikas-mc/wiliwili 
 
 cd wiliwili 
 git.exe submodule update  --init -- "library/libpdr" "library/pystring" "library/mongoose"
