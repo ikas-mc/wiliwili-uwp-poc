@@ -50,6 +50,7 @@ ffmpeg
     
     openssl
     ./Configure VC-WIN32-UWP
-    ./Configure  --cross-compile-prefix=x86_64-w64-mingw32uwp- no-unit-test no-asm no-async no-uplink  enable-static-engine no-tests no-docs  no-shared no-module  no-apps  no-pinshared  no-autoload-config enable-winstore no-deprecated no-ui-console no-stdio no-uplink    mingw64
-    
+    #./Configure  --cross-compile-prefix=x86_64-w64-mingw32uwp- no-unit-test no-asm no-async no-uplink  enable-static-engine no-tests no-docs  no-shared no-module  no-apps  no-pinshared  no-autoload-config enable-winstore no-deprecated no-ui-console no-stdio no-uplink    mingw64
+    https://packages.msys2.org/package/mingw-w64-x86_64-openssl
+    mingw-w64-clang-x86_64-openssl-3.2.0-1-any.pkg.tar.zst
 ```
