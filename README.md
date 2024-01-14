@@ -25,6 +25,9 @@ build libmpv for uwp or use winrt MediaPlayer
 
 
 update:
+-20230114
+add libmpv for uwp
+
 -20230107
 add dash
 
