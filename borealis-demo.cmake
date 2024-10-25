@@ -13,7 +13,7 @@ set_property(SOURCE ${PACKAGE_ASSETS_FILES} PROPERTY VS_DEPLOYMENT_CONTENT 1)
 set_property(SOURCE ${PACKAGE_ASSETS_FILES} PROPERTY VS_DEPLOYMENT_LOCATION "Assets")
 
 
-file(GLOB_RECURSE MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/borealis/demo/*.cpp)
+file(GLOB_RECURSE MAIN_SRC ${CMAKE_CURRENT_SOURCE_DIR}/borealis/demo/src/*.cpp)
 
 # add resource
 set(PROJECT_RESOURCES "${CMAKE_CURRENT_SOURCE_DIR}/borealis/resources")
@@ -33,7 +33,7 @@ endforeach()
 
 # target
 add_executable(${PROJECT_NAME} WIN32 "${MAIN_SRC}" ${PROJECT_RESOURCES_FILES} ${TEMPLATE_FILES} ${PACKAGE_ASSETS_FILES})
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/borealis/demo)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/borealis/demo/include())
 
 set_target_properties(${PROJECT_NAME} PROPERTIES  VS_GLOBAL_AppxBundle "Always")
 

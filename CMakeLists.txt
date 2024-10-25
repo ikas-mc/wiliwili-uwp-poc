@@ -17,6 +17,6 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 include(borealis.cmake)
 
-include(borealis-demo.cmake)
+#include(borealis-demo.cmake)
 
 include(wiliwili.cmake)
