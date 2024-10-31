@@ -13,6 +13,19 @@
                 "CMAKE_SYSTEM_NAME":"WindowsStore",
                 "CMAKE_SYSTEM_VERSION":"10.0"
             }
+        },
+        {
+            "name": "uwp-release",
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Visual Studio 17 2022",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-uwp-static-md",
+                "VCPKG_INSTALL_OPTIONS":"--allow-unsupported",
+                "CMAKE_SYSTEM_NAME":"WindowsStore",
+                "CMAKE_SYSTEM_VERSION":"10.0"
+            }
         }
     ]
 }

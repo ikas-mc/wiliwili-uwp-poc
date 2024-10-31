@@ -25,12 +25,11 @@ mklink /j  borealis "%workDir%\borealis"
 mklink /j  wiliwili "%workDir%\wiliwili"
 
 
-cmake --preset=uwp
+rem cmake --preset=uwp-release
+rem cmake --build build
 
-rem build all debug
+cmake --preset=uwp-release
 cmake --build build
-
-rem build wiliwili release
-msbuild build\wiliwili-uwp.vcxproj /m /p:configuration="release" /p:platform="x64" /p:AppxBundlePlatforms="x64" /p:UapAppxPackageBuildMode=SideloadOnly /p:PackageOptionalProjectsInIdeBuilds=False
+rem msbuild build\wiliwili-uwp.vcxproj /m /p:configuration="release" /p:platform="x64" /p:AppxBundlePlatforms="x64" /p:UapAppxPackageBuildMode=SideloadOnly /p:PackageOptionalProjectsInIdeBuilds=False
 
 cd %workDir%
