@@ -5,26 +5,37 @@
             "name": "uwp",
             "binaryDir": "${sourceDir}/build",
             "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "x64"
+            },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
                 "VCPKG_TARGET_TRIPLET": "x64-uwp-static-md",
-                "VCPKG_INSTALL_OPTIONS":"--allow-unsupported",
-                "CMAKE_SYSTEM_NAME":"WindowsStore",
-                "CMAKE_SYSTEM_VERSION":"10.0"
+                "VCPKG_INSTALL_OPTIONS": "--allow-unsupported",
+                "CMAKE_SYSTEM_NAME": "WindowsStore",
+                "CMAKE_SYSTEM_VERSION": "10.0"
+            },
+            "vendor": {
+                "jetbrains.com/clion": {
+                    "toolchain": "Visual Studio"
+                }
             }
         },
         {
             "name": "uwp-release",
             "binaryDir": "${sourceDir}/build",
             "generator": "Visual Studio 17 2022",
+            "architecture": {
+                "value": "x64"
+            },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
                 "VCPKG_TARGET_TRIPLET": "x64-uwp-static-md",
-                "VCPKG_INSTALL_OPTIONS":"--allow-unsupported",
-                "CMAKE_SYSTEM_NAME":"WindowsStore",
-                "CMAKE_SYSTEM_VERSION":"10.0"
+                "VCPKG_INSTALL_OPTIONS": "--allow-unsupported",
+                "CMAKE_SYSTEM_NAME": "WindowsStore",
+                "CMAKE_SYSTEM_VERSION": "10.0"
             }
         }
     ]

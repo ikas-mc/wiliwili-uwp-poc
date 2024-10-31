@@ -23,8 +23,8 @@ jobs:
       with:
         name: wiliwili-uwp-X64
         path: |
-          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\**\*.msixbundle
-          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\**\*.msix
-          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\**\*.appx
-          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\**\*.cer
-          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\**\Dependencies\x64\*
+          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\wiliwili-uwp\*\*.msixbundle
+          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\wiliwili-uwp\*\*.msix
+          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\wiliwili-uwp\*\*.appx
+          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\wiliwili-uwp\*\*.cer
+          ${{github.workspace}}\wiliwili-uwp-poc\build\AppPackages\wiliwili-uwp\*\Dependencies\x64\*
