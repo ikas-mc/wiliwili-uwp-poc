@@ -8,7 +8,7 @@
 	IgnorableNamespaces="uap mp uap3 desktop">
 
 	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert"
-		Version="1.4.0.2" />
+		Version="1.5.0.2" />
 	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4"
 		PhonePublisherId="00000000-0000-0000-0000-000000000000" />
 	<Properties>
@@ -26,14 +26,14 @@
 	<Applications>
 		<Application Id="App" Executable="wiliwili-uwp.exe" EntryPoint="wiliwili-uwp.App">
 			<uap:VisualElements
-				DisplayName="wiliwili-uwp"
-				Description="wiliwili-uwp"
-				BackgroundColor="#336699"
-				Square150x150Logo="Assets\Logo.png"
-				Square44x44Logo="Assets\SmallLogo44x44.png">
-				<uap:SplashScreen Image="Assets\SplashScreen.png" />
-				<uap:DefaultTile />
-			</uap:VisualElements>
+              DisplayName="wiliwili uwp-unofficial"
+              Square150x150Logo="Assets\Square150x150Logo.png"
+              Square44x44Logo="Assets\Square44x44Logo.png"
+              Description="wiliwili uwp-unofficial"
+              BackgroundColor="transparent">
+              <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
+              <uap:SplashScreen Image="Assets\SplashScreen.png" />
+            </uap:VisualElements>
 			<Extensions>
 				<uap3:Extension Category="windows.appExecutionAlias">
 					<uap3:AppExecutionAlias>
