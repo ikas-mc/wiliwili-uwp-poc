@@ -5,7 +5,8 @@
 	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
 	xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
 	xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-	IgnorableNamespaces="uap mp uap3 desktop">
+	xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+	IgnorableNamespaces="uap mp uap3 desktop rescap">
 
 	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert"
 		Version="1.5.1.3" />
@@ -48,5 +49,6 @@
 		<Capability Name="internetClientServer" />
 		<Capability Name="privateNetworkClientServer" />
 		<uap3:Capability Name="backgroundMediaPlayback" />
+		<rescap:Capability Name="hevcPlayback" />
 	</Capabilities>
 </Package>
