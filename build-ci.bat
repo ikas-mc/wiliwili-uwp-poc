@@ -1,5 +1,7 @@
 set workDir=%~dp0
 
+set VCPKG_ROOT=%VCPKG_INSTALLATION_ROOT%
+
 rem git clone https://github.com/microsoft/vcpkg.git
 rem cd vcpkg 
 rem call bootstrap-vcpkg.bat --disable-metrics
