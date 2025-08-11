@@ -1,16 +1,16 @@
 set workDir=%~dp0
 
-git clone https://github.com/microsoft/vcpkg.git
-cd vcpkg 
-call bootstrap-vcpkg.bat --disable-metrics
-set VCPKG_ROOT=%workDir%\vcpkg
-cd %workDir%
+rem git clone https://github.com/microsoft/vcpkg.git
+rem cd vcpkg 
+rem call bootstrap-vcpkg.bat --disable-metrics
+rem set VCPKG_ROOT=%workDir%\vcpkg
+rem cd %workDir%
 
-curl -o cmake-3.28.1-windows-x86_64.zip https://cmake.org/files/v3.28/cmake-3.28.1-windows-x86_64.zip
-tar -xf cmake-3.28.1-windows-x86_64.zip
-set CMAKE_ROOT=%workDir%\cmake-3.28.1-windows-x86_64
+rem curl -o cmake-3.28.1-windows-x86_64.zip https://cmake.org/files/v3.28/cmake-3.28.1-windows-x86_64.zip
+rem tar -xf cmake-3.28.1-windows-x86_64.zip
+rem set CMAKE_ROOT=%workDir%\cmake-3.28.1-windows-x86_64
 
-set PATH=%CMAKE_ROOT%\bin;%VCPKG_ROOT%;%PATH%
+rem set PATH=%CMAKE_ROOT%\bin;%VCPKG_ROOT%;%PATH%
 
 git clone --depth 1 https://github.com/ikas-mc/wiliwili-uwp-poc
 git clone --depth 1 -b wiliwili-uwp-dev https://github.com/ikas-mc/borealis
