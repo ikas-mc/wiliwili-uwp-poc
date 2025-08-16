@@ -14,6 +14,12 @@
     "sdl2",
     "tinyxml2",
     "tweeny",
-    "cppwinrt"
+    "cppwinrt",
+    {
+      "name": "directxtk",
+      "features": [
+        "xaudio2-9"
+      ]
+    }
   ]
 }

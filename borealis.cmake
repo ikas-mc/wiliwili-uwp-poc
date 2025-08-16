@@ -16,7 +16,7 @@ endif ()
 set(BRLS_PLATFORM_RESOURCES_PATH "\"${BRLS_RESOURCES_DIR}/resources/\"")
 
 list(APPEND BOREALIS_INCLUDE ${BOREALIS_PATH}/include/compat )
-list(APPEND BOREALIS_SOURCE ${BOREALIS_PATH}/lib/platforms/sdl)
+list(APPEND BOREALIS_SOURCE ${BOREALIS_PATH}/lib/platforms/winrt)
 list(APPEND BOREALIS_SRC ${BOREALIS_PATH}/lib/platforms/driver/d3d11.cpp)
 list(APPEND BOREALIS_SOURCE ${BOREALIS_PATH}/lib/platforms/desktop)
 
@@ -82,13 +82,9 @@ add_subdirectory(${BOREALIS_PATH}/lib/extern/yoga/yoga EXCLUDE_FROM_ALL)
 target_compile_options(yogacore PRIVATE -fvisibility=default)
 target_link_libraries(borealis  yogacore)
 
-# sdl2
-find_package(SDL2 CONFIG REQUIRED)
-target_link_libraries(borealis
-        $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
-        $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
-)
 
+find_package(directxtk CONFIG REQUIRED)
+target_link_libraries(borealis  Microsoft::DirectXTK)
 
 list(APPEND BRLS_PLATFORM_LIBS d3d11)
 list(APPEND BRLS_PLATFORM_LIBS wlanapi iphlpapi ws2_32)
@@ -100,4 +96,4 @@ target_compile_options(borealis PUBLIC
         -DYG_ENABLE_EVENTS
         ${BRLS_PLATFORM_OPTION}
         )
-target_compile_definitions(borealis PRIVATE  BOREALIS_USE_STD_THREAD __WINRT__ BOREALIS_USE_D3D11 __SDL2__ NOMINMAX _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS _WINSOCK_DEPRECATED_NO_WARNINGS _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNINGS)
+target_compile_definitions(borealis PRIVATE  BOREALIS_USE_STD_THREAD __WINRT__ __WINRT_NEW__ BOREALIS_USE_D3D11 NOMINMAX _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS _WINSOCK_DEPRECATED_NO_WARNINGS _CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_WARNINGS)
