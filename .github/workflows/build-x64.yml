@@ -8,7 +8,7 @@ jobs:
 
     env: 
       USERNAME: ikas-mc
-      VCPKG_EXE: ${{ VCPKG_INSTALLATION_ROOT }}/vcpkg
+      VCPKG_EXE: ${{ env.VCPKG_INSTALLATION_ROOT }}/vcpkg
       FEED_URL: https://nuget.pkg.github.com/ikas-mc/index.json
       VCPKG_BINARY_SOURCES: "clear;nuget,https://nuget.pkg.github.com/ikas-mc/index.json,readwrite"
 
