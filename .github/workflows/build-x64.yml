@@ -8,7 +8,6 @@ jobs:
 
     env: 
       USERNAME: ikas-mc
-      VCPKG_EXE: ${{ env.VCPKG_INSTALLATION_ROOT }}/vcpkg
       FEED_URL: https://nuget.pkg.github.com/ikas-mc/index.json
       VCPKG_BINARY_SOURCES: "clear;nuget,https://nuget.pkg.github.com/ikas-mc/index.json,readwrite"
 
@@ -19,14 +18,14 @@ jobs:
     - name: Add NuGet sources
       shell: pwsh
       run: |
-        .$(${{ env.VCPKG_EXE }} fetch nuget) `
+        .$($env:VCPKG_INSTALLATION_ROOT\vcpkg.exe fetch nuget) `
           sources add `
           -Source "${{ env.FEED_URL }}" `
           -StorePasswordInClearText `
           -Name GitHubPackages `
           -UserName "${{ env.USERNAME }}" `
           -Password "${{ secrets.GH_PACKAGES_TOKEN }}"
-        .$(${{ env.VCPKG_EXE }} fetch nuget) `
+        .$($env:VCPKG_INSTALLATION_ROOT\vcpkg.exe fetch nuget) `
           setapikey "${{ secrets.GH_PACKAGES_TOKEN }}" `
           -Source "${{ env.FEED_URL }}"
           
