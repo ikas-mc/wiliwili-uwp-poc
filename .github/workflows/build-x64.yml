@@ -7,19 +7,29 @@ jobs:
     runs-on: windows-latest
 
     env: 
-      VCPKG_BINARY_SOURCES: "clear;x-gha,readwrite"
+      USERNAME: ikas-mc
+      VCPKG_EXE: ${{ VCPKG_INSTALLATION_ROOT }}/vcpkg
+      FEED_URL: https://nuget.pkg.github.com/ikas-mc/index.json
+      VCPKG_BINARY_SOURCES: "clear;nuget,https://nuget.pkg.github.com/ikas-mc/index.json,readwrite"
 
     steps:
     - name: msvc
       uses: microsoft/setup-msbuild@v2
 
-    - name: Export GitHub Actions cache environment variables
-      uses: actions/github-script@v7
-      with:
-        script: |
-          core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
-          core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
-      
+    - name: Add NuGet sources
+      shell: pwsh
+      run: |
+        .$(${{ env.VCPKG_EXE }} fetch nuget) `
+          sources add `
+          -Source "${{ env.FEED_URL }}" `
+          -StorePasswordInClearText `
+          -Name GitHubPackages `
+          -UserName "${{ env.USERNAME }}" `
+          -Password "${{ secrets.GH_PACKAGES_TOKEN }}"
+        .$(${{ env.VCPKG_EXE }} fetch nuget) `
+          setapikey "${{ secrets.GH_PACKAGES_TOKEN }}" `
+          -Source "${{ env.FEED_URL }}"
+          
     - name: script
       shell: cmd
       run: curl -o build.bat https://raw.githubusercontent.com/ikas-mc/wiliwili-uwp-poc/main/build-ci.bat
