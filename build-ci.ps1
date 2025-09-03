@@ -9,10 +9,22 @@ if (-not (Test-Path "$env:VCPKG_ROOT\vcpkg.exe")) {
     exit 1
 }
 
-Invoke-WebRequest -OutFile '.\mpv-4.0.zip' https://github.com/ikas-mc/wiliwili-uwp-poc/releases/download/0.4/mpv-4.0.zip
-Expand-Archive '.\mpv-4.0.zip' -DestinationPath '.\libs\mpv\' -Force
-if (-not (Test-Path '.\wiliwili-uwp-poc\libs\mpv\lib\mpv.lib')) {
-    Write-Error "Failed to install mpv-4.0.zip"
+if (-not (Test-Path '.\libs\mpv\lib\mpv.lib')) {
+    $mpvUrl = 'https://github.com/ikas-mc/wiliwili-uwp-poc/releases/download/0.4/x64-uwp-mpv.zip'
+    $mpvHash = '82f8ce29700bf2c586d64c991f602b78c3e9a560c9094f07572db7f7e3ab7cef'
+    & curl.exe -L -o '.\x64-uwp-mpv.zip' $mpvUrl
+    
+    $actualHash = (Get-FileHash '.\x64-uwp-mpv.zip' -Algorithm SHA256).Hash.ToLower()
+    if ($actualHash -ne $mpvHash) {
+        Write-Error "x64-uwp-mpv.zip hash mismatch: expected $mpvHash but got $actualHash"
+        exit 1
+    }
+
+    Expand-Archive '.\x64-uwp-mpv.zip' -DestinationPath '.\libs\mpv\' -Force
+}
+
+if (-not (Test-Path '.\libs\mpv\lib\mpv.lib')) {
+    Write-Error "Failed to install x64-uwp-mpv.zip"
     exit 1
 }
 
@@ -28,6 +40,6 @@ if (-not (Test-Path "./wiliwili")) {
 
 Set-Location $workDir
 
-& cmake --preset=uwp
+& cmake --preset=uwp-release
 
 & msbuild build\wiliwili-uwp.vcxproj /m /p:configuration="release" /p:platform="x64" /p:AppxBundlePlatforms="x64" /p:UapAppxPackageBuildMode="SideloadOnly" /p:PackageOptionalProjectsInIdeBuilds=False
