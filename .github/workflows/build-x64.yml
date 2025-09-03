@@ -31,7 +31,7 @@ jobs:
           
     - name: script
       shell: cmd
-      run: curl -o build.bat https://raw.githubusercontent.com/ikas-mc/wiliwili-uwp-poc/winrt-dev/build-ci.bat
+      run: curl -o build.bat https://raw.githubusercontent.com/ikas-mc/wiliwili-uwp-poc/main/build-ci.bat
 
     - name: build
       shell: cmd

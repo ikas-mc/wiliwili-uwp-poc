@@ -14,9 +14,13 @@ rem set CMAKE_ROOT=%workDir%\cmake-3.28.1-windows-x86_64
 
 rem set PATH=%CMAKE_ROOT%\bin;%VCPKG_ROOT%;%PATH%
 
+
 git clone --depth 1 -b winrt-dev https://github.com/ikas-mc/wiliwili-uwp-poc
 git clone --depth 1 -b winrt-dev https://github.com/ikas-mc/borealis
 git clone --depth 1 -b winrt-dev https://github.com/ikas-mc/wiliwili 
+
+curl -o wiliwili-uwp-poc\libs\mpv\mpv-4.0.zip https://github.com/ikas-mc/wiliwili-uwp-poc/releases/download/0.4/mpv-4.0.zip
+tar -xf wiliwili-uwp-poc\libs\mpv\mpv-4.0.zip -C wiliwili-uwp-poc\libs\mpv
 
 cd wiliwili 
 git.exe submodule update  --init -- "library/libpdr" "library/pystring" "library/mongoose"
@@ -29,8 +33,6 @@ mklink /j  wiliwili "%workDir%\wiliwili"
 
 rem cmake --preset=uwp
 rem cmake --build build
-
-llvm-strip --discard-all libs\libmpv\bin\libmpv-2.dll
 
 cmake --preset=uwp-release
 rem cmake --build build
