@@ -9,7 +9,7 @@
 	IgnorableNamespaces="uap mp uap3 desktop rescap">
 
 	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert"
-		Version="1.5.2.9" />
+		Version="1.5.2.10" />
 	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4"
 		PhonePublisherId="00000000-0000-0000-0000-000000000000" />
 	<Properties>
