@@ -8,3 +8,7 @@ research
 .vs
 /cmake-build-debug
 /cmake-build-debug-event-trace
+libmpv-test.cmake
+libs/mpv/bin
+libs/mpv/lib
+vcpkg.evn.bat
