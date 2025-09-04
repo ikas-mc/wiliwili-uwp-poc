@@ -54,7 +54,6 @@ set(BOREALIS_DRIVER BOREALIS_USE_D3D11)
 list(APPEND BRLS_PLATFORM_OPTION -D${BOREALIS_DRIVER})
 message(STATUS "borealis driver ${BOREALIS_DRIVER}")
 
-
 # borealis Library
 add_library(borealis STATIC ${BOREALIS_SRC})
 

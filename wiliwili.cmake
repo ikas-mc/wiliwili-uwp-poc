@@ -82,11 +82,11 @@ add_executable(${PROJECT_NAME} WIN32 ${MAIN_SRC} ${PDR_SRC} ${PROJECT_RESOURCES2
 list(APPEND HEADER_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR}/libs/mpv/include)
 target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/libs/mpv/lib/mpv.lib)
 
-find_package(cppwinrt CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} Microsoft::CppWinRT)
+#find_package(cppwinrt CONFIG REQUIRED)
+#target_link_libraries(${PROJECT_NAME} Microsoft::CppWinRT)
 
-find_package(unofficial-lunasvg CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} unofficial::lunasvg::lunasvg)
+find_package(lunasvg CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} lunasvg::lunasvg)
 
 # find_package(unofficial-mongoose CONFIG REQUIRED)
 # target_link_libraries(${PROJECT_NAME} unofficial::mongoose::mongoose)

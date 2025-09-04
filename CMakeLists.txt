@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 project(wiliwili-uwp-poc)
 
 #https://learn.microsoft.com/zh-cn/cpp/build/reference/execution-charset-set-execution-character-set?view=msvc-170
-add_compile_options(/source-charset:utf-8 /execution-charset:utf-8)
+add_compile_options(/utf-8)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 include(borealis.cmake)
