@@ -9,11 +9,11 @@
 	IgnorableNamespaces="uap mp uap3 desktop rescap">
 
 	<Identity Name="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4" Publisher="CN=CMake Test Cert"
-		Version="1.5.2.10" />
+		Version="1.5.2.12" />
 	<mp:PhoneIdentity PhoneProductId="B02DDE91-A1D1-48FB-9EBA-2259161BD7A4"
 		PhonePublisherId="00000000-0000-0000-0000-000000000000" />
 	<Properties>
-		<DisplayName>wiliwili uwp</DisplayName>
+		<DisplayName>wiliwili uwp-unofficial</DisplayName>
 		<PublisherDisplayName>unofficial</PublisherDisplayName>
 		<Logo>Assets\StoreLogo.png</Logo>
 	</Properties>
@@ -30,7 +30,7 @@
               DisplayName="wiliwili uwp-unofficial"
               Square150x150Logo="Assets\Square150x150Logo.png"
               Square44x44Logo="Assets\Square44x44Logo.png"
-              Description="wiliwili uwp-unofficial"
+              Description="wiliwili for xbox (unofficial)"
               BackgroundColor="transparent">
               <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
               <uap:SplashScreen Image="Assets\SplashScreen.png" />
