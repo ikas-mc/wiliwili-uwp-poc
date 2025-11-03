@@ -32,7 +32,9 @@ jobs:
           -Source "${{ env.FEED_URL }}"
 
     - name: build
-      run: .\build-ci.ps1
+      run: |
+        $env:VERSION_BUILD_NUMBER = "${{github.run_number}}"
+        .\build-ci.ps1
 
     - name: upload
       uses: actions/upload-artifact@v4
